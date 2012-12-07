@@ -38,7 +38,6 @@
     [_humidity release];
     [_windDescription release];
     [_windDir release];
-    
     [super dealloc];
 }
 @end

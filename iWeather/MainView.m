@@ -7,11 +7,11 @@
 //
 
 #import "MainView.h"
-
+#import "HourlyWeatherFolderView.h"
 @implementation MainView
 
 @synthesize label = _label;
-
+@synthesize temp  = _temp;
 - (id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity
 {
     self = [super initWithFrame:frame];
@@ -87,7 +87,16 @@
 {
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 300, 50)];
     self.label.text = self.weatherOfToday.cityFullName;
+    self.temp =[[UILabel  alloc]initWithFrame:CGRectMake(120, 150, 300, 50)];
+    self.temp.text =self.weatherOfToday.stateName;
+    [self addSubview:self.temp];
     [self addSubview:self.label];
+    
+    
+    HourlyWeatherFolderView * hour =[[HourlyWeatherFolderView alloc]initWithFrame:CGRectMake(0, 0, 320, 460)];
+    
+    [self addSubview:hour];
+    
 }
 
 @end

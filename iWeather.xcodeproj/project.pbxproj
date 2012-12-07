@@ -48,6 +48,7 @@
 		8B4B14D9166FB83E0001A5C6 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B14CB166FB83E0001A5C6 /* ASIInputStream.m */; };
 		8B4B14DA166FB83E0001A5C6 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B14CD166FB83E0001A5C6 /* ASINetworkQueue.m */; };
 		8B4B14DB166FB83E0001A5C6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B14D2166FB83E0001A5C6 /* Reachability.m */; };
+		A7B7218C1671BC6B008E4CA8 /* HourlyWeatherModal.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B7218B1671BC6A008E4CA8 /* HourlyWeatherModal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,8 @@
 		8B4B14CE166FB83E0001A5C6 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		8B4B14D1166FB83E0001A5C6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8B4B14D2166FB83E0001A5C6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A7B7218A1671BC69008E4CA8 /* HourlyWeatherModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourlyWeatherModal.h; sourceTree = "<group>"; };
+		A7B7218B1671BC6A008E4CA8 /* HourlyWeatherModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourlyWeatherModal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 				8B4B14AA166FB33B0001A5C6 /* MapSemiView.m */,
 				8B4B1493166FB11E0001A5C6 /* WeatherDetailModal.h */,
 				8B4B1494166FB11E0001A5C6 /* WeatherDetailModal.m */,
+				A7B7218A1671BC69008E4CA8 /* HourlyWeatherModal.h */,
+				A7B7218B1671BC6A008E4CA8 /* HourlyWeatherModal.m */,
 				8B4B14AC166FB37D0001A5C6 /* WeeklyWeatherInfoModal.h */,
 				8B4B14AD166FB37E0001A5C6 /* WeeklyWeatherInfoModal.m */,
 				8B4B14AF166FB3E80001A5C6 /* CitiesSubscriptionWeatherInfoModal.h */,
@@ -398,6 +403,7 @@
 				8B161E98167032EA00DCB3B2 /* SBJsonUTF8Stream.m in Sources */,
 				8B161E99167032EA00DCB3B2 /* SBJsonWriter.m in Sources */,
 				8B161E9C16705F7800DCB3B2 /* MainView.m in Sources */,
+				A7B7218C1671BC6B008E4CA8 /* HourlyWeatherModal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

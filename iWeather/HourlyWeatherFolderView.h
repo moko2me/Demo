@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HourlyWeatherModal.h"
+#import "ASIHTTPRequst/ASIHTTPRequest.h"
 
-@interface HourlyWeatherFolderView : UIView
+
+@interface HourlyWeatherFolderView : UIView <ASIHTTPRequestDelegate>
+{
+    NSMutableArray *_hourlyWeather;
+}
+
+- (id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity;
+- (id)initWithFrame:(CGRect)frame;
+- (id)init;
 
 @end

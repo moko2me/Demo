@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WeeklyWeatherInfoModal.h"
 @interface RightView : UIView
+{
+    WeeklyWeatherInfoModal * _weeklyWeatherInfo;
+}
 
 @end

@@ -11,13 +11,15 @@
 #import "ASIHTTPRequst/ASIHTTPRequest.h"
 #import "SBJson/SBJson.h"
 
-@interface MainView : UIView
+@interface MainView : UIView <ASIHTTPRequestDelegate>
 {
     WeatherDetailModal *_weatherOfToday;
     UILabel *_label;
+    UILabel *_temp;
 }
 
 @property (nonatomic, retain) UILabel *label;
+@property (nonatomic, retain) UILabel *temp;
 
 - (id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity;
 

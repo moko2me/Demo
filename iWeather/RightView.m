@@ -7,25 +7,35 @@
 //
 
 #import "RightView.h"
-
+#import "ASIHTTPRequst/ASIHTTPRequest.h"
 @implementation RightView
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self getWeeklyWeather];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+#pragma mark setter & getter
+-(WeeklyWeatherInfoModal *)weeklyWeatherInfo
 {
-    // Drawing code
+    return _weeklyWeatherInfo;
 }
-*/
+
+-(void)setWeeklyWeather
+{
+    
+}
+
+-(void)getWeeklyWeather
+{
+    for (int i =1; i<=4; i++) {
+        NSString * urlStr =[NSString stringWithFormat:@"http://api.wunderground.com/api/8114536921ad78c7/conditions/q/%d.json", i++];
+        NSURL * url =[NSURL URLWithString:urlStr];  
+    }
+}
 
 @end

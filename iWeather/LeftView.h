@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WeatherDetailModal.h"
 @interface LeftView : UIView
-
+{
+    WeatherDetailModal * _weatherOfDetail;
+}
+-(id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity;
 @end
