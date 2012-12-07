@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BottomView : UIView
+{
+    NSArray *_citiesSubscribed;
+    NSArray *_citiesWeatherInfo;
+}
 
 @end

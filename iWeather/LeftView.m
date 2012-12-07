@@ -11,31 +11,32 @@
 #import "SBJson/SBJson.h"
 @implementation LeftView
 
--(id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity
+- (id)init
 {
-    self =[super initWithFrame:frame];
+    self = [self initWithFrame:CGRectMake(0, 0, 320, 460)];
     if (self) {
-        _weatherOfDetail =[[WeatherDetailModal alloc]init];
+        return self;
     }
-    return  self;
+    return nil;
 }
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [self initWithFrame:frame AndCity:@"NYC"];
+    self = [super initWithFrame:frame];
     if (self) {
-        return self;
+        _weatherOfDetail = [[WeatherDetailModal alloc]init];
+        
+        NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
+        [nc addObserver:self selector:@selector(recvWeatherInfo:) name:@"WeatherInfo" object:nil];
     }
-    return nil;
+    return  self;
 }
 
-- (id)init
+- (void)recvWeatherInfo:(NSNotification *)notify
 {
-    self = [self initWithFrame:CGRectMake(0, 0, 320, 460) AndCity:@"NYC"];
-    if (self)
-        return self;
-    return nil;
-    
+    NSDictionary *weather = notify.userInfo;
+    WeatherDetailModal *weatherInfo = [weather objectForKey:@"weather"];
+    [self setWeatherOfDetail:weatherInfo];
 }
 
 #pragma mark Setter& Getter
@@ -45,12 +46,13 @@
     return _weatherOfDetail;
 }
 
--(void)setWeatherOfDetail:(NSDictionary *)dict
+-(void)setWeatherOfDetail:(WeatherDetailModal *)info
 {
-    NSDictionary * currentObservation =[dict objectForKey:@"xxx"];
-    NSDictionary *locationInfo =[currentObservation objectForKey:[currentObservation    objectForKey:@"xxxx"]];
+    _weatherOfDetail = [info retain];
+    [self layoutView];
 }
 
+/*
 -(void)getWeatherDetailOfCity:(NSString *)aCity
 {
     NSString * urlStr =[NSString stringWithFormat:@"http://api.wunderground.com/api/8114536921ad78c7/conditions/q/%@.json", aCity];
@@ -62,15 +64,17 @@
 
 -(void)requestFinished:(ASIHTTPRequest *)request
 {
+    WeatherDetailModal
     NSString * str =[[NSString alloc]initWithData:request.responseData encoding:NSUTF8StringEncoding];
     NSDictionary *dict =[str JSONValue];
     [self setWeatherOfDetail:dict];
     [self layoutView];
 }
+*/
 
 -(void)layoutView
 {
-
+    NSLog(@"%@", _weatherOfDetail.cityFullName);
 }
 
 @end

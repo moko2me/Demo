@@ -11,13 +11,12 @@
 
 @implementation HourlyWeatherFolderView
 
-
 - (id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity
 {
     self = [super initWithFrame:frame];
     if (self) {
         _hourlyWeather =[[NSMutableArray alloc] initWithCapacity:5];
-        [self getHourlyWeatherFolder:aCity];
+        [self getHourlyWeather:aCity];
     }
     return self;
 }
@@ -72,7 +71,7 @@
     }
 }
 
--(void)getHourlyWeatherFolder:(NSString *)aCity
+-(void)getHourlyWeather:(NSString *)aCity
 {
     NSString *urlStr =[NSString stringWithFormat:@"http://api.wunderground.com/api/8114536921ad78c7/hourly/q/%@.json", aCity] ;
     NSURL *url =[NSURL URLWithString:urlStr];

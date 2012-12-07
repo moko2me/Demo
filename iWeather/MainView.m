@@ -65,6 +65,10 @@
     _weatherOfToday.windDir          = [currentObservation objectForKey:@"wind_dir"];
     _weatherOfToday.visibility_mi    = [[currentObservation objectForKey:@"visibility_mi"] floatValue];
     _weatherOfToday.visibility_km    = [[currentObservation objectForKey:@"visibility_km"] floatValue];
+        
+    NSDictionary * weather  =[NSDictionary dictionaryWithObjectsAndKeys:self.weatherOfToday,@"weather", nil];
+    NSNotificationCenter * nc =[NSNotificationCenter defaultCenter];
+    [nc postNotificationName:@"WeatherInfo" object:self userInfo:weather];
 }
 
 - (void)getWeatherDetailOfCity:(NSString *)aCity

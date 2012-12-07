@@ -22,5 +22,6 @@
 @property (nonatomic, retain) UILabel *temp;
 
 - (id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity;
+- (WeatherDetailModal *)weatherOfToday;
 
 @end

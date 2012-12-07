@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HourlyWeatherModal.h"
+#import "SBJson/SBJson.h"
 #import "ASIHTTPRequst/ASIHTTPRequest.h"
 
 

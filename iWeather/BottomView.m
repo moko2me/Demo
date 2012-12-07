@@ -10,22 +10,37 @@
 
 @implementation BottomView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame AndCities:(NSArray *)citiesArr
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _citiesSubscribed =[[NSMutableArray alloc] initWithCapacity:4];
+        [self getWeatherForCities:citiesArr];
     }
     return self;
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (id)initWithFrame:(CGRect)frame
 {
-    // Drawing code
+    self = [self initWithFrame:frame AndCities:];
+    if (self)
+        return self;
+    return nil;
+}
+
+- (id)init
+{
+    self = [self initWithFrame:CGRectMake(0, 0, 320, 460) AndCities:@"NYC"];
+    if (self)
+        return self;
+    return nil;
 }
 */
+
+- (void)getWeatherForCities:(NSArray *)citiesArr
+{
+    
+}
 
 @end

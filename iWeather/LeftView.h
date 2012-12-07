@@ -12,5 +12,7 @@
 {
     WeatherDetailModal * _weatherOfDetail;
 }
--(id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity;
+
+- (id)init;
+
 @end
