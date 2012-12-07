@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "WeeklyWeatherInfoModal.h"
-@interface RightView : UIView
+#import "ASIHTTPRequst/ASIHTTPRequest.h"
+@interface RightView : UIView<ASIHTTPRequestDelegate>
 {
-    WeeklyWeatherInfoModal * _weeklyWeatherInfo;
+    NSMutableArray * weeklyWeatherInfo;
 }
+
+- (id)initWithFrame:(CGRect)frame AndCity:(NSString *)aCity;
 
 @end

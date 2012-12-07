@@ -9,20 +9,23 @@
 #import "WeeklyWeatherInfoModal.h"
 
 @implementation WeeklyWeatherInfoModal
-@synthesize day1,day2,day3,day4,day5;
-@synthesize day1Temp,day2Temp,day3Temp,day4Temp,day5Temp;
+@synthesize year = _year,month = _month,monthName = _monthName,day = _day,weekdayName = _weekdayName,weekdayNameAbbreviation = _weekdayNameAbbreviation,ampm = _ampm,condition = _condition;
+@synthesize temp_high_c = _temp_high_c, temp_high_f = _temp_high_f,temp_low_c = _temp_low_c,temp_low_f = _temp_low_f;
 
 
 
 
 -(void)dealloc
 {
-      [day1 release];
-      [day2 release];
-      [day3 release];
-      [day4 release];
-      [day5 release];
-    
+    [_month release];
+    [_year release];
+    [_monthName release];
+    [_day release];
+    [_weekdayNameAbbreviation release];
+    [_weekdayName release];
+    [_ampm release];
+    [_condition release];
+     
     [super dealloc];
 
 

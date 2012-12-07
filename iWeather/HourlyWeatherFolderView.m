@@ -7,8 +7,7 @@
 //
 
 #import "HourlyWeatherFolderView.h"
-#import "ASIHTTPRequst/ASIHTTPRequest.h"
-#import "SBJson/SBJson.h"
+                                                                                
 
 @implementation HourlyWeatherFolderView
 
@@ -49,7 +48,6 @@
 {    
     for (int i = 0; i < 5; i++) {
         HourlyWeatherModal * hourlyWeather =[[HourlyWeatherModal alloc]init];
-        NSLog(@"%@", dict);
         NSArray *hourlyForecast =[dict objectForKey:@"hourly_forecast"];
         NSDictionary *hourly = [hourlyForecast objectAtIndex:i++];
         NSDictionary *time = [hourly objectForKey:@"FCTTIME"];

@@ -16,7 +16,6 @@
     self =[super initWithFrame:frame];
     if (self) {
         _weatherOfDetail =[[WeatherDetailModal alloc]init];
-        [self getWeatherDetailOfCity:aCity];
     }
     return  self;
 }

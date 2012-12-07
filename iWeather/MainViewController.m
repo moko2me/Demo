@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "MainView.h"
+#import "RightView.h"
 
 @interface MainViewController ()
 
@@ -26,12 +27,15 @@
     {
         MainView *main = [[MainView alloc] initWithFrame:CGRectMake(0, 0, 320, 460) AndCity:citySaved];
         [self.view addSubview:main];
+        RightView *right = [[RightView alloc] initWithFrame:CGRectMake(0, 0, 320, 460) AndCity:citySaved];
+        [self.view addSubview:right];
 
     }else
     {
         MainView *main = [[MainView alloc] init];
         [self.view addSubview:main];
-
+        RightView *right = [[RightView alloc] initWithFrame:CGRectMake(0, 0, 320, 460) AndCity:@"NYC"];
+        [self.view addSubview:right];
     }
 }
 
